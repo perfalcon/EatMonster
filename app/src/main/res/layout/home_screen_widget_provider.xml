@@ -16,7 +16,8 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
-        android:src="@drawable/vanilla_cone" />
+        android:src="@drawable/vanilla_cone"
+        android:contentDescription="@string/cdFoodImage"/>
 
     <TextView
         android:id="@+id/tvCoins"

@@ -39,7 +39,7 @@
             android:layout_width="@dimen/text_width"
             android:layout_height="@dimen/text_height"
             android:layout_marginTop="@dimen/text_marginTop"
-            android:text="Coins"
+            android:text="@string/coinsDefaultText"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,7 +56,7 @@
             android:layout_width="@dimen/text_width"
             android:layout_height="@dimen/text_height"
             android:layout_marginTop="@dimen/text_marginTop"
-            android:text="Score"
+            android:text="@string/scoreDefaultText"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vwH1" />
 

@@ -155,6 +155,8 @@ public class MainActivity extends AppCompatActivity   implements RewardedVideoAd
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_main);
 
+        ButterKnife.bind (this);
+        getFoodItems (this);
       if(savedInstanceState!=null){
           Log.v(TAG,"in saved");
           if(savedInstanceState.containsKey(EATSTATUS_STATE)){
@@ -168,15 +170,13 @@ public class MainActivity extends AppCompatActivity   implements RewardedVideoAd
           mLevel = new Level ();
           mEatSatus.setSettings (new Settings ());
           mEatSatus.setLevel (new Level ());
+          activateLoader();
       }
 
 
         // Create the client used to sign in to Google services.
         mGoogleSignInClient = GoogleSignIn.getClient(this,
                 new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN).build());
-
-        ButterKnife.bind (this);
-
 
         // Load an ad into the AdMob banner view.
         AdView adView = (AdView) findViewById (R.id.adView);
@@ -200,9 +200,6 @@ public class MainActivity extends AppCompatActivity   implements RewardedVideoAd
         // [END tracker]
 
         originalBitmap =  ((BitmapDrawable)ivFood.getDrawable()).getBitmap();
-
-        getFoodItems (this);
-        activateLoader();
         addAnalyticsTracking("Main");
     }
 

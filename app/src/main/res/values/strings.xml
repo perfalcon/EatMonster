@@ -11,6 +11,9 @@
     <string name="add_widget">Add widget</string>
     <string name="cdFoodImage">Current Food Item</string>
     <string name="cdFace">This is a Monster Face</string>
+    <string name="cdPlay50Coins">Play the Ad to get 50 coins</string>
+    <string name="cdPlay100Coins">Play the Ad to get 100 coins</string>
+    <string name="cdPlay150Coins">Play the Ad to get 150 coins</string>
     <string name="coinsDefaultText">Coins: 0</string>
     <string name="scoreDefaultText">Score: 0</string>
     <string name="coinsLabelText">Coins: </string>
@@ -34,7 +37,7 @@
     <string name="Level_4">Level 4</string>
     <string name="Level_5">Level 5</string>
     <string name="NetworkConnectionError">Please check your Internet Connection.</string>
-
+    <string name="score">Score</string>
 
 
 </resources>

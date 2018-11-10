@@ -51,6 +51,7 @@
         app:layout_constraintHorizontal_bias="@dimen/imagePopupPlay_constraintHorizontal_bias"
         app:layout_constraintStart_toEndOf="@+id/tv50Coins"
         app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/cdPlay50Coins"
          />
 
     <ImageView
@@ -60,6 +61,7 @@
         app:layout_constraintHorizontal_bias="@dimen/imagePopupPlay_constraintHorizontal_bias"
         app:layout_constraintStart_toEndOf="@+id/tv100Coins"
         app:layout_constraintTop_toTopOf="@+id/vwH1"
+        android:contentDescription="@string/cdPlay100Coins"
          />
 
     <ImageView
@@ -69,6 +71,7 @@
         app:layout_constraintHorizontal_bias="@dimen/imagePopupPlay_constraintHorizontal_bias"
         app:layout_constraintStart_toEndOf="@+id/tv150Coins"
         app:layout_constraintTop_toTopOf="@+id/vwH2"
+        android:contentDescription="@string/cdPlay150Coins"
          />
 
 </android.support.constraint.ConstraintLayout>
