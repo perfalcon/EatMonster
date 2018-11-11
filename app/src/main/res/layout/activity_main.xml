@@ -29,16 +29,14 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="@dimen/toolbar_height"
         android:background="?attr/colorPrimary"
-        android:elevation="4dp"
+        android:elevation="@dimen/toolbar_elevation"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:layout_constraintBottom_toTopOf="@+id/cstlTop"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginLeft="@dimen/list_toolbar_side_margin"
-        android:layout_marginRight="@dimen/list_toolbar_side_margin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/app_name"
         tools:targetApi="lollipop">
 
     </android.support.v7.widget.Toolbar>

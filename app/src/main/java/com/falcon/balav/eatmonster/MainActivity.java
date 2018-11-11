@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity   implements RewardedVideoAd
                 onBackPressed();
             }
         });
-        tbToolbar.setTitle ("Eat Monster");
+
 
 
       if(savedInstanceState!=null){
