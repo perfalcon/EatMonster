@@ -14,7 +14,7 @@ android {
     }
     signingConfigs {
         myConfig {
-            storeFile file("C:\\Users\\balav\\android_app_keys\\android_alpha_eatmonster.jks")
+            storeFile file("android_alpha_eatmonster.jks")
             storePassword "android"
             keyAlias "key0"
             keyPassword "android"
