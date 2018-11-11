@@ -20,4 +20,6 @@
     <color name="colorEarthAccent">#EEFF41</color>
     <color name="colorEarthMenu">#2196F3</color>
 
+    <color name="colorWidgetBackgroud">#00C400</color>
+
 </resources>
