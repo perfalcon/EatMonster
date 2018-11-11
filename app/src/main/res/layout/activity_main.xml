@@ -8,6 +8,8 @@
     tools:context=".MainActivity"
     android:id="@+id/cstlMain">
 
+
+
     <!-- view for AdMob Banner Ad -->
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
@@ -24,14 +26,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintBottom_toTopOf="@+id/cstlTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="@dimen/list_toolbar_side_margin"
+        android:layout_marginRight="@dimen/list_toolbar_side_margin"
+        tools:targetApi="lollipop">
+
+    </android.support.v7.widget.Toolbar>
+
     <android.support.constraint.ConstraintLayout
         android:id="@+id/cstlTop"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/menuBar_height"
+        android:layout_height="84dp"
         android:background="@color/colorMenu"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
 
         <TextView
             android:id="@+id/tvCoins"
@@ -74,9 +95,9 @@
             android:layout_marginStart="@dimen/imageLevel_marginStart"
             android:contentDescription="@string/cdFoodImage"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/vwV2"
             app:layout_constraintStart_toStartOf="@+id/vwV1"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/vwV2"
             app:layout_constraintVertical_bias="@dimen/imageLevel_constraintVertical_bias"
             app:srcCompat="@drawable/vanilla_cone" />
 
@@ -117,11 +138,11 @@
             android:layout_marginBottom="@dimen/imageSettings_marginBottom"
             android:layout_marginEnd="@dimen/imageSettings_margingEnd"
             android:contentDescription="@string/cdSettings"
+            android:src="@drawable/ic_action_settings"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageMore"
-            app:layout_constraintVertical_bias="@dimen/imageSettings_verticalbias"
-            android:src="@drawable/ic_action_settings" />
+            app:layout_constraintVertical_bias="@dimen/imageSettings_verticalbias" />
 
 
         <ImageView
@@ -132,8 +153,7 @@
             android:contentDescription="@string/cdOptions"
             android:src="@drawable/ic_action_menu"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </android.support.constraint.ConstraintLayout>

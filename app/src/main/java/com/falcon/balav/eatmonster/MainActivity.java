@@ -23,6 +23,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar.LayoutParams;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -104,8 +105,7 @@ public class MainActivity extends AppCompatActivity   implements RewardedVideoAd
     private AchievementsClient mAchievementsClient;
     //private LeaderboardsClient mLeaderboardsClient;
     private EventsClient mEventsClient;
-  //  private PlayersClient mPlayersClient;
-    // achievements and scores we're pending to push to the cloud
+   // achievements and scores we're pending to push to the cloud
     // (waiting for the user to sign in, for instance)
    private final AccomplishmentsOutbox mOutbox = new AccomplishmentsOutbox();
 
@@ -116,6 +116,9 @@ public class MainActivity extends AppCompatActivity   implements RewardedVideoAd
     @BindView (R.id.imageFood)    ImageView ivFood;
     @BindView (R.id.imageMore) ImageView ivMore;
     @BindView (R.id.imageSettings) ImageView ivSettings;
+    @BindView (R.id.toolbar) Toolbar tbToolbar;
+
+
 
     ImageView iv50Coins;
     ImageView iv100Coins;
@@ -154,9 +157,20 @@ public class MainActivity extends AppCompatActivity   implements RewardedVideoAd
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_main);
+        setSupportActionBar(tbToolbar);
 
         ButterKnife.bind (this);
         getFoodItems (this);
+
+        tbToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+        tbToolbar.setTitle ("Eat Monster");
+
+
       if(savedInstanceState!=null){
           Log.v(TAG,"in saved");
           if(savedInstanceState.containsKey(EATSTATUS_STATE)){
